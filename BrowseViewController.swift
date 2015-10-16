@@ -10,6 +10,10 @@ import UIKit
 
 class BrowseViewController: UIViewController {
 
+    @IBOutlet weak var mealresultScrollView: UIScrollView!
+    
+    @IBOutlet weak var searchTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
