@@ -10,6 +10,13 @@ import UIKit
 
 class IndividualMealViewController: UIViewController {
 
+    @IBOutlet weak var mealImageView: UIImageView!
+    
+    @IBOutlet weak var mealnameLabel: UILabel!
+    
+    
+    @IBOutlet weak var ingredientsLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

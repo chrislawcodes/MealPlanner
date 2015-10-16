@@ -68,6 +68,11 @@ Salt And Pepper, to taste</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="ingredientsLabel" destination="4Mu-XR-GfH" id="nS6-a2-Erv"/>
+                        <outlet property="mealImageView" destination="mQU-Wt-DIm" id="CQt-J5-fux"/>
+                        <outlet property="mealnameLabel" destination="q0i-w2-HeY" id="Tg3-ZY-gDN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W2e-oW-452" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
