@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--WeekViewCotroller-->
+        <!--WeeklyViewCotroller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="WeekViewCotroller" id="BYZ-38-t0r" customClass="ViewController" customModule="MealPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="WeeklyViewCotroller" id="BYZ-38-t0r" customClass="WeeklyViewController" customModule="MealPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,7 +23,7 @@
         <!--IndividualMealViewController-->
         <scene sceneID="Sd7-sR-dxG">
             <objects>
-                <viewController title="IndividualMealViewController" id="WeV-Rz-85l" sceneMemberID="viewController">
+                <viewController title="IndividualMealViewController" id="WeV-Rz-85l" customClass="IndividualMealViewController" customModule="MealPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="068-mA-1YN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,7 +39,7 @@
         <!--AssignMealViewController-->
         <scene sceneID="6NL-tN-NtU">
             <objects>
-                <viewController title="AssignMealViewController" id="AW3-sN-9Sn" sceneMemberID="viewController">
+                <viewController title="AssignMealViewController" id="AW3-sN-9Sn" customClass="AssignMealViewController" customModule="MealPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hfq-x9-44A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -50,12 +50,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OT0-vV-1Eh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1174.5" y="-354.5"/>
+            <point key="canvasLocation" x="1257.5" y="-354.5"/>
         </scene>
         <!--BrowseViewController-->
         <scene sceneID="kXo-8W-Pmd">
             <objects>
-                <viewController title="BrowseViewController" id="w1c-7o-viT" sceneMemberID="viewController">
+                <viewController title="BrowseViewController" id="w1c-7o-viT" customClass="BrowseViewController" customModule="MealPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LCW-91-U8E">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,7 +71,7 @@
         <!--DailyViewController-->
         <scene sceneID="Qhh-kW-YLo">
             <objects>
-                <viewController title="DailyViewController" id="2xH-GI-7rb" sceneMemberID="viewController">
+                <viewController title="DailyViewController" id="2xH-GI-7rb" customClass="DailyViewController" customModule="MealPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u5p-YT-lYX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,7 +87,7 @@
         <!--LoginViewController-->
         <scene sceneID="XUP-91-NWx">
             <objects>
-                <viewController title="LoginViewController" id="ZmY-c4-c8O" sceneMemberID="viewController">
+                <viewController title="LoginViewController" id="ZmY-c4-c8O" customClass="LoginViewController" customModule="MealPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RGQ-kZ-iqy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
