@@ -14,10 +14,10 @@ class TabViewController: UIViewController {
     
     @IBOutlet var buttons: [UIButton]!
     
-    var weeklyViewController: UIViewController!
-    var browseViewController: UIViewController!
+    var weeklynavViewController: UIViewController!
+    var browsenavViewController: UIViewController!
     var myrecipesViewController: UIViewController!
-    var favoritesViewController: UIViewController!
+    var favoritesnavViewController: UIViewController!
     
     var viewControllers: [UIViewController]!
     
@@ -29,15 +29,19 @@ class TabViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
 
         
-        weeklyViewController = storyboard.instantiateViewControllerWithIdentifier("WeeklyViewController")
-        browseViewController = storyboard.instantiateViewControllerWithIdentifier("BrowseViewController")
+        weeklynavViewController = storyboard.instantiateViewControllerWithIdentifier("WeeklyNavViewController")
+        browsenavViewController = storyboard.instantiateViewControllerWithIdentifier("BrowseNavViewController")
         myrecipesViewController = storyboard.instantiateViewControllerWithIdentifier("MyRecipesViewController")
-        favoritesViewController = storyboard.instantiateViewControllerWithIdentifier("FavoritesViewController")
+        favoritesnavViewController = storyboard.instantiateViewControllerWithIdentifier("FavoritesNavViewController")
         
-        viewControllers = [weeklyViewController, browseViewController, myrecipesViewController, favoritesViewController]
+        viewControllers = [weeklynavViewController, browsenavViewController, myrecipesViewController, favoritesnavViewController]
         
         buttons[selectedIndex].selected = true
         didpressTab(buttons[selectedIndex])
+        
+        NSNotificationCenter.defaultCenter().addObserverForName("ResetTabController", object: nil, queue: NSOperationQueue.mainQueue()) { (NSNotification) -> Void in
+            self.didpressTab(self.buttons[0])
+        }
         
     }
 
@@ -68,6 +72,7 @@ class TabViewController: UIViewController {
         vc.didMoveToParentViewController(self)
         
     }
+    
 
     /*
     // MARK: - Navigation

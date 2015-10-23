@@ -1,14 +1,14 @@
 //
-//  AssignMealViewController.swift
+//  SearchViewController.swift
 //  MealPlanner
 //
-//  Created by Claw on 10/16/15.
+//  Created by Claw on 10/22/15.
 //  Copyright © 2015 Claw. All rights reserved.
 //
 
 import UIKit
 
-class AssignMealViewController: UIViewController {
+class SearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,16 +21,7 @@ class AssignMealViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func oncancelButton(sender: UIButton) {
-        self.navigationController?.popViewControllerAnimated(true)
-    }
 
-    @IBAction func ondonePress(sender: AnyObject) {
-        navigationController?.popToRootViewControllerAnimated(true)
-        
-        NSNotificationCenter.defaultCenter().postNotificationName("ResetTabController", object: nil)
-        
-    }
     /*
     // MARK: - Navigation
 
