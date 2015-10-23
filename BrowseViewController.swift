@@ -12,12 +12,13 @@ class BrowseViewController: UIViewController {
 
     @IBOutlet weak var mealresultScrollView: UIScrollView!
     
-    @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var browseresultImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        mealresultScrollView.contentSize = browseresultImageView.image!.size
+        
     }
 
     override func didReceiveMemoryWarning() {

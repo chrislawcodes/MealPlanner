@@ -10,10 +10,15 @@ import UIKit
 
 class DailyViewController: UIViewController {
 
+    @IBOutlet weak var dayplanScrollView: UIScrollView!
+    
+    @IBOutlet weak var dailyviewImageView: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        dayplanScrollView.contentSize = dailyviewImageView.image!.size
     }
 
     override func didReceiveMemoryWarning() {

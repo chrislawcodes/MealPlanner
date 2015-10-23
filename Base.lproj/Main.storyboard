@@ -4,79 +4,128 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--WeeklyViewCotroller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Tab View Controller-->
+        <scene sceneID="5Ca-qR-2e5">
             <objects>
-                <viewController title="WeeklyViewCotroller" id="BYZ-38-t0r" customClass="WeeklyViewController" customModule="MealPlanner" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="162.66666666666666" y="406.59333333333331"/>
-        </scene>
-        <!--IndividualMealViewController-->
-        <scene sceneID="Sd7-sR-dxG">
-            <objects>
-                <viewController title="IndividualMealViewController" id="WeV-Rz-85l" customClass="IndividualMealViewController" customModule="MealPlanner" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="068-mA-1YN">
+                <viewController id="LWI-Mf-Re9" customClass="TabViewController" customModule="MealPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EvA-Q8-s46">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Planner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Sn8-h3-che">
-                                <rect key="frame" x="138" y="20" width="99" height="21"/>
+                            <view contentMode="scaleToFill" id="8rC-aP-2Xu">
+                                <rect key="frame" x="0.0" y="600" width="375" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="KHQ-Oa-2Dv" userLabel="Weekly View Button">
+                                        <rect key="frame" x="15" y="12" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <state key="normal" image="Plan_icon"/>
+                                        <connections>
+                                            <action selector="didpressTab:" destination="LWI-Mf-Re9" eventType="touchUpInside" id="ICB-yY-MmM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NDi-qy-t78">
+                                        <rect key="frame" x="210" y="10" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <state key="normal" image="Recipe_icon"/>
+                                        <connections>
+                                            <action selector="didpressTab:" destination="LWI-Mf-Re9" eventType="touchUpInside" id="dRr-ah-c2u"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mAj-an-P0u">
+                                        <rect key="frame" x="300" y="10" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <state key="normal" image="Favorites_icon"/>
+                                        <connections>
+                                            <action selector="didpressTab:" destination="LWI-Mf-Re9" eventType="touchUpInside" id="hag-vb-Zyo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zXQ-Ji-NKU">
+                                        <rect key="frame" x="110" y="10" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <state key="normal" image="Browse_icon"/>
+                                        <connections>
+                                            <action selector="didpressTab:" destination="LWI-Mf-Re9" eventType="touchUpInside" id="wx2-Bu-g1T"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.10041748690000001" green="1" blue="0.30046025170000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="Nw4-3W-1pc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="mQU-Wt-DIm">
-                                <rect key="frame" x="-5" y="74" width="385" height="271"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roast Chicken" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="q0i-w2-HeY">
-                                <rect key="frame" x="0.0" y="283" width="375" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4Mu-XR-GfH">
-                                <rect key="frame" x="20" y="344" width="335" height="323"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                                <string key="text">Ingredients 
-1 whole Chicken, Rinsed And Patted Dry
-3/4 cups Butter, Softened
-3 whole Lemons
-4 sprigs Rosemary
-Salt And Pepper, to taste</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="ingredientsLabel" destination="4Mu-XR-GfH" id="nS6-a2-Erv"/>
-                        <outlet property="mealImageView" destination="mQU-Wt-DIm" id="CQt-J5-fux"/>
-                        <outlet property="mealnameLabel" destination="q0i-w2-HeY" id="Tg3-ZY-gDN"/>
+                        <outlet property="contentView" destination="Nw4-3W-1pc" id="y0s-5K-U8s"/>
+                        <outletCollection property="buttons" destination="KHQ-Oa-2Dv" collectionClass="NSMutableArray" id="IjW-Em-d0x"/>
+                        <outletCollection property="buttons" destination="zXQ-Ji-NKU" collectionClass="NSMutableArray" id="zbl-xU-dRq"/>
+                        <outletCollection property="buttons" destination="NDi-qy-t78" collectionClass="NSMutableArray" id="D4e-Re-jqY"/>
+                        <outletCollection property="buttons" destination="mAj-an-P0u" collectionClass="NSMutableArray" id="kI8-m1-V02"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W2e-oW-452" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v7J-wX-i1z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="717.5" y="-354.5"/>
+            <point key="canvasLocation" x="-553.5" y="598.5"/>
+        </scene>
+        <!--WeeklyViewController-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="WeeklyViewController" title="WeeklyViewController" id="BYZ-38-t0r" customClass="WeeklyViewController" customModule="MealPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="b8O-8A-6ES">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1367"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Weekly View" id="hRY-Qg-WC0">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1367"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <animations/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0pP-gk-Nq6">
+                                        <rect key="frame" x="325" y="26" width="42" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="U9r-me-qwg">
+                                        <rect key="frame" x="1" y="119" width="347" height="361"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <connections>
+                                            <segue destination="2xH-GI-7rb" kind="modal" id="tkv-kn-gr2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                            </scrollView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="1367"/>
+                    <connections>
+                        <outlet property="weeklyImageView" destination="hRY-Qg-WC0" id="Y2O-g0-C9O"/>
+                        <outlet property="weeklyScrollView" destination="b8O-8A-6ES" id="S1F-H4-hPd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="204.5" y="-651.5"/>
         </scene>
         <!--AssignMealViewController-->
         <scene sceneID="6NL-tN-NtU">
@@ -85,73 +134,225 @@ Salt And Pepper, to taste</string>
                     <view key="view" contentMode="scaleToFill" id="hfq-x9-44A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Assigning Meal" id="u9y-e1-3wZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="670"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <animations/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Bsz-Sd-i0j" userLabel="Cancel Button">
+                                <rect key="frame" x="15" y="388" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <connections>
+                                    <segue destination="uGP-80-tFt" kind="modal" id="3bq-zK-flq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5GS-Gt-Pl0" userLabel="Done Button">
+                                <rect key="frame" x="309" y="388" width="56" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <connections>
+                                    <segue destination="2xH-GI-7rb" kind="modal" id="oMI-zq-AFc"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="jg8-fy-lSF"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OT0-vV-1Eh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1257.5" y="-354.5"/>
+            <point key="canvasLocation" x="1424.5" y="598.5"/>
         </scene>
         <!--BrowseViewController-->
         <scene sceneID="kXo-8W-Pmd">
             <objects>
-                <viewController title="BrowseViewController" id="w1c-7o-viT" customClass="BrowseViewController" customModule="MealPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BrowseViewController" title="BrowseViewController" id="w1c-7o-viT" customClass="BrowseViewController" customModule="MealPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LCW-91-U8E">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1333"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="MAN-oX-HDE">
+                                <rect key="frame" x="-2" y="0.0" width="375" height="1333"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="t69-yx-z5i" userLabel="MealButton">
+                                        <rect key="frame" x="8" y="116" width="359" height="292"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <connections>
+                                            <segue destination="uGP-80-tFt" kind="modal" id="tSK-gJ-9Gi"/>
+                                        </connections>
+                                    </button>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Browse" id="z1S-oa-yUh">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1333"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <animations/>
+                                    </imageView>
+                                </subviews>
+                                <animations/>
+                            </scrollView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="1333"/>
+                    <connections>
+                        <outlet property="browseresultImageView" destination="z1S-oa-yUh" id="JdE-gH-4cQ"/>
+                        <outlet property="mealresultScrollView" destination="MAN-oX-HDE" id="I4o-2O-f6c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h73-11-ntk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="204.5" y="931.5"/>
+        </scene>
+        <!--My Recipes View Controller-->
+        <scene sceneID="4rE-ro-X6v">
+            <objects>
+                <viewController storyboardIdentifier="MyRecipesViewController" id="VmP-w2-KVS" customClass="MyRecipesViewController" customModule="MealPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yd8-2L-mSc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Search" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="vvc-ZQ-KJw">
-                                <rect key="frame" x="20" y="69" width="335" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="My Recipes" id="2M1-ol-0wz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="670"/>
+                                <autoresizingMask key="autoresizingMask"/>
                                 <animations/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="MAN-oX-HDE">
-                                <rect key="frame" x="-2" y="115" width="375" height="551"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                            </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Planner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Za8-Yg-xBl">
-                                <rect key="frame" x="138" y="20" width="99" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="mealresultScrollView" destination="MAN-oX-HDE" id="I4o-2O-f6c"/>
-                        <outlet property="searchTextField" destination="vvc-ZQ-KJw" id="Qfw-o1-Y3u"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="h73-11-ntk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="33y-NI-PMK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="156.5" y="-354.5"/>
+            <point key="canvasLocation" x="204.5" y="2187.5"/>
+        </scene>
+        <!--Favorites View Controller-->
+        <scene sceneID="IkG-wa-KIv">
+            <objects>
+                <viewController storyboardIdentifier="FavoritesViewController" id="Oy7-pT-JoY" customClass="FavoritesViewController" customModule="MealPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NwU-Bt-bad">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Favorites" id="Fee-6n-nSw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="670"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p8u-2R-XIp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="204.5" y="2996.5"/>
         </scene>
         <!--DailyViewController-->
         <scene sceneID="Qhh-kW-YLo">
             <objects>
                 <viewController title="DailyViewController" id="2xH-GI-7rb" customClass="DailyViewController" customModule="MealPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u5p-YT-lYX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1033"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="xo1-Fp-TtB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1033"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Daily View" id="t1w-6F-e06">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1033"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <animations/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ye3-MQ-Ep2" userLabel="Back to Weekly Button">
+                                        <rect key="frame" x="15" y="31" width="75" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="modal" id="mPP-4O-cKR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kYb-uO-sye" userLabel="Add Meal Button">
+                                        <rect key="frame" x="320" y="25" width="47" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <connections>
+                                            <segue destination="w1c-7o-viT" kind="modal" id="xUK-MZ-csL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SrP-lv-oDk" userLabel="MealButton">
+                                        <rect key="frame" x="8" y="118" width="359" height="288"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <connections>
+                                            <segue destination="uGP-80-tFt" kind="modal" id="Mp4-gA-bSK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                            </scrollView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="1033"/>
+                    <connections>
+                        <outlet property="dailyviewImageView" destination="t1w-6F-e06" id="p4e-AS-51c"/>
+                        <outlet property="dayplanScrollView" destination="xo1-Fp-TtB" id="Jfl-xb-ofd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8WZ-sS-msT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="727.5" y="-818.5"/>
+        </scene>
+        <!--Individual Meal View Controller-->
+        <scene sceneID="Yda-x9-dkf">
+            <objects>
+                <viewController id="uGP-80-tFt" customClass="IndividualMealViewController" customModule="MealPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EFK-TD-1wq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Individual Meals" id="cCv-Yp-xA6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="670"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <animations/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="91j-1s-zSj">
+                                <rect key="frame" x="8" y="20" width="89" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <connections>
+                                    <segue destination="2xH-GI-7rb" kind="modal" id="ZBs-AU-crE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Hdd-X1-vWp">
+                                <rect key="frame" x="325" y="28" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <connections>
+                                    <segue destination="AW3-sN-9Sn" kind="modal" id="xtT-2U-Y6G"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8WZ-sS-msT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WsB-8W-i8z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="717.5" y="406.5"/>
+            <point key="canvasLocation" x="760.5" y="598.5"/>
         </scene>
         <!--LoginViewController-->
         <scene sceneID="XUP-91-NWx">
@@ -160,6 +361,21 @@ Salt And Pepper, to taste</string>
                     <view key="view" contentMode="scaleToFill" id="RGQ-kZ-iqy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="LogIn" id="abc-Kz-wkt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="670"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <animations/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XMp-JY-GVD">
+                                <rect key="frame" x="26" y="525" width="323" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <connections>
+                                    <segue destination="LWI-Mf-Re9" kind="modal" id="Bwz-KB-n6E"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -167,7 +383,25 @@ Salt And Pepper, to taste</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C31-Zj-Ds4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="162.5" y="1258.5"/>
+            <point key="canvasLocation" x="-1200.5" y="598.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Assigning Meal" width="375" height="670"/>
+        <image name="Browse" width="375" height="1333"/>
+        <image name="Browse_icon" width="50" height="50"/>
+        <image name="Daily View" width="375" height="1033"/>
+        <image name="Favorites" width="375" height="670"/>
+        <image name="Favorites_icon" width="50" height="44"/>
+        <image name="Individual Meals" width="375" height="670"/>
+        <image name="LogIn" width="375" height="670"/>
+        <image name="My Recipes" width="375" height="670"/>
+        <image name="Plan_icon" width="46" height="46"/>
+        <image name="Recipe_icon" width="60" height="44"/>
+        <image name="Weekly View" width="375" height="1367"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="tkv-kn-gr2"/>
+        <segue reference="Mp4-gA-bSK"/>
+    </inferredMetricsTieBreakers>
 </document>

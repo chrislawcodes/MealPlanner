@@ -1,28 +1,19 @@
 //
-//  WeeklyViewController.swift
+//  MyRecipesViewController.swift
 //  MealPlanner
 //
-//  Created by Claw on 10/16/15.
+//  Created by Claw on 10/22/15.
 //  Copyright © 2015 Claw. All rights reserved.
 //
 
 import UIKit
 
-class WeeklyViewController: UIViewController {
+class MyRecipesViewController: UIViewController {
 
-
-    @IBOutlet weak var weeklyScrollView: UIScrollView!
-    
-    @IBOutlet weak var weeklyImageView: UIImageView!
-    
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        weeklyScrollView.contentSize = weeklyImageView.image!.size
-        
-        
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
