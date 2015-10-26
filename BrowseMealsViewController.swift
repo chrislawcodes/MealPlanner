@@ -1,5 +1,5 @@
 //
-//  BrowseViewController.swift
+//  BrowseMealsViewController.swift
 //  MealPlanner
 //
 //  Created by Claw on 10/16/15.
@@ -8,14 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController,
+class BrowseMealsViewController: UIViewController,
     UITableViewDelegate,
-    UITableViewDataSource {
-
+UITableViewDataSource {
+    
     
     @IBOutlet weak var tableView: UITableView!
     
-        
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,13 +24,13 @@ class ViewController: UIViewController,
         tableView.dataSource = self
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
         
         func tableView(tableView: UITableView, numberOfRowsInSection section: Int) ->Int {
-                return 20
+            return 20
         }
         
         func tableView(tableView: UITableView, cellForRowAtIndexPath IndexPath: NSIndexPath) -> UITableViewCell {
@@ -43,15 +43,15 @@ class ViewController: UIViewController,
         
     }
     
-
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }

@@ -13,14 +13,14 @@ class WeeklyViewController: UIViewController {
 
     @IBOutlet weak var weeklyScrollView: UIScrollView!
     
-    @IBOutlet weak var weeklyImageView: UIImageView!
+
     
+    @IBOutlet weak var weekImageView: UIButton!
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        weeklyScrollView.contentSize = weeklyImageView.image!.size
+        
         
         
     }
