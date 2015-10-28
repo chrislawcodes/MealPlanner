@@ -206,7 +206,7 @@
         <!--BrowseViewController-->
         <scene sceneID="kXo-8W-Pmd">
             <objects>
-                <viewController storyboardIdentifier="BrowseViewController" title="BrowseViewController" extendedLayoutIncludesOpaqueBars="YES" id="w1c-7o-viT" customClass="BrowseRecipesViewController" customModule="MealPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BrowseRecipesViewController" title="BrowseViewController" extendedLayoutIncludesOpaqueBars="YES" id="w1c-7o-viT" customClass="BrowseRecipesViewController" customModule="MealPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LCW-91-U8E">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="670"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -217,14 +217,17 @@
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="searchTextField:" destination="w1c-7o-viT" eventType="editingDidEnd" id="7bm-H3-pO9"/>
+                                </connections>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="337" sectionHeaderHeight="28" sectionFooterHeight="28" id="Rkw-kA-P0Q">
-                                <rect key="frame" x="0.0" y="65" width="375" height="605"/>
+                                <rect key="frame" x="0.0" y="111" width="375" height="605"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MealCell" rowHeight="337" id="Kiq-K3-m8t" userLabel="ResultCell" customClass="ResultCell" customModule="MealPlanner" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResultCell" rowHeight="337" id="Kiq-K3-m8t" userLabel="ResultCell" customClass="ResultCell" customModule="MealPlanner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="337"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kiq-K3-m8t" id="idx-Jp-mlC">
@@ -237,14 +240,6 @@
                                                     <animations/>
                                                     <color key="backgroundColor" red="0.2666666667" green="0.66666666669999997" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gpO-fZ-0la">
-                                                    <rect key="frame" x="8" y="16" width="141" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <animations/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9XP-G5-u6z">
                                                     <rect key="frame" x="176" y="16" width="191" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -279,12 +274,11 @@
                     <size key="freeformSize" width="375" height="670"/>
                     <connections>
                         <outlet property="browseTableView" destination="Rkw-kA-P0Q" id="uFd-NW-PcF"/>
-                        <outlet property="tableView" destination="Rkw-kA-P0Q" id="qKu-Lw-mjf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h73-11-ntk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1481.5" y="600"/>
+            <point key="canvasLocation" x="1223.5" y="600"/>
         </scene>
         <!--My Recipes View Controller-->
         <scene sceneID="4rE-ro-X6v">
