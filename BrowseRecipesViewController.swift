@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import AFNetworking
 
 class BrowseRecipesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var browseTableView: UITableView!
+    
+    @IBOutlet weak var searchTextField: UITextField!
     
     var recipenames: [String]!
     var recipes: [NSDictionary]!
@@ -60,23 +63,34 @@ class BrowseRecipesViewController: UIViewController, UITableViewDelegate, UITabl
         let cell = browseTableView.dequeueReusableCellWithIdentifier("ResultCell")! as! ResultCell
         
         let recipe = recipes[indexPath.row]
-//        let recipename = recipe["title"] as!NSDictionary
+        let urlString = recipe.valueForKeyPath("image_url") as! String
         
         cell.recipenameLabel.text = recipe["title"] as! String
-//        cell.recipeImageView.image =
+        cell.recipeImageView.setImageWithURL(NSURL(string: urlString)!)
 
     return cell
     
 }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func onSearchPress(sender: AnyObject) {
+//        print(searchTextField.text!)
+//        print("http://food2fork.com/api/search?key=7e1cd92e04fda52d2520cfc3046b9f4b&q=\(searchTextField.text!)")
+        var originalSearchString = searchTextField.text!
+        var escapedSearchString = originalSearchString.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())
+        print("New URL: \(escapedSearchString)")
+        
+        let url = NSURL(string: "http://food2fork.com/api/search?key=7e1cd92e04fda52d2520cfc3046b9f4b&q=\(escapedSearchString!)")!
+        let request = NSURLRequest(URL: url)
+        
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue())
+            { (response:NSURLResponse?, data: NSData?, error: NSError?) -> Void in
+                
+                let json = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments) as! NSDictionary
+                
+                print(json)
+                
+                self.recipes = json["recipes"] as! [NSDictionary]
+                self.browseTableView.reloadData()
+        }
     }
-    */
-
 }

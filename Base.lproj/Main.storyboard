@@ -212,7 +212,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" id="nLw-N9-sxk">
-                                <rect key="frame" x="8" y="73" width="359" height="30"/>
+                                <rect key="frame" x="8" y="73" width="300" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -221,6 +221,15 @@
                                     <action selector="searchTextField:" destination="w1c-7o-viT" eventType="editingDidEnd" id="7bm-H3-pO9"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ktI-CF-GRH">
+                                <rect key="frame" x="316" y="73" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="onSearchPress:" destination="w1c-7o-viT" eventType="touchUpInside" id="BgP-yQ-ySb"/>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="337" sectionHeaderHeight="28" sectionFooterHeight="28" id="Rkw-kA-P0Q">
                                 <rect key="frame" x="0.0" y="111" width="375" height="605"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -274,6 +283,7 @@
                     <size key="freeformSize" width="375" height="670"/>
                     <connections>
                         <outlet property="browseTableView" destination="Rkw-kA-P0Q" id="uFd-NW-PcF"/>
+                        <outlet property="searchTextField" destination="nLw-N9-sxk" id="rTN-jC-NqW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h73-11-ntk" userLabel="First Responder" sceneMemberID="firstResponder"/>
