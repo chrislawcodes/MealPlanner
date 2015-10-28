@@ -35,7 +35,6 @@ class BrowseRecipesViewController: UIViewController, UITableViewDelegate, UITabl
                 
                 self.recipes = json["recipes"] as! [NSDictionary]
                 self.browseTableView.reloadData()
-    
                 
         }
     }
@@ -59,11 +58,13 @@ class BrowseRecipesViewController: UIViewController, UITableViewDelegate, UITabl
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     
         let cell = browseTableView.dequeueReusableCellWithIdentifier("ResultCell")! as! ResultCell
+        
+        let recipe = recipes[indexPath.row]
+//        let recipename = recipe["title"] as!NSDictionary
+        
+        cell.recipenameLabel.text = recipe["title"] as! String
+//        cell.recipeImageView.image =
 
-    
-    
-    cell.recipenameLabel.text = recipenames[indexPath.row]
-    
     return cell
     
 }
