@@ -15,6 +15,8 @@ class BrowseRecipesViewController: UIViewController, UITableViewDelegate, UITabl
     
     @IBOutlet weak var searchTextField: UITextField!
     
+    var individualRecipeViewController = ViewController
+    
     var recipenames: [String]!
     var recipes: [NSDictionary]!
 
@@ -74,7 +76,7 @@ class BrowseRecipesViewController: UIViewController, UITableViewDelegate, UITabl
 
     @IBAction func onSearchPress(sender: AnyObject) {
 //        print(searchTextField.text!)
-//        print("http://food2fork.com/api/search?key=7e1cd92e04fda52d2520cfc3046b9f4b&q=\(searchTextField.text!)")
+//        print("http://food2fork.com/api/search?key=7e1cd92e04fda52d2520cfc3046b9f4b&q=\(searchTextField.text!)&sort=r")
         var originalSearchString = searchTextField.text!
         var escapedSearchString = originalSearchString.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())
         print("New URL: \(escapedSearchString)")
@@ -93,4 +95,12 @@ class BrowseRecipesViewController: UIViewController, UITableViewDelegate, UITabl
                 self.browseTableView.reloadData()
         }
     }
+    
+// Try to pass the recipe Id that user clicked on into the next screen
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if segue.identifier == "getRecipeSegue" {
+//            let individualRecipeViewController = segue.destinationViewController as! IndividualRecipeViewController
+//            individualRecipeViewController.recipeId = ???
+//        }
+//    }
 }

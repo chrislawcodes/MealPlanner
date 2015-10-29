@@ -249,19 +249,27 @@
                                                     <animations/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="55i-ni-crE">
-                                                    <rect key="frame" x="8" y="58" width="359" height="240"/>
+                                                    <rect key="frame" x="8" y="58" width="360" height="240"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <color key="backgroundColor" red="0.2666666667" green="0.66666666669999997" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9XP-G5-u6z">
-                                                    <rect key="frame" x="8" y="8" width="359" height="42"/>
+                                                    <rect key="frame" x="8" y="8" width="360" height="42"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FhA-Ap-kYx">
+                                                    <rect key="frame" x="8" y="14" width="359" height="289"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <connections>
+                                                        <segue destination="uGP-80-tFt" kind="push" identifier="getRecipeSegue" id="6q9-sS-4nE"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <animations/>
                                         </tableViewCellContentView>
@@ -364,9 +372,6 @@
                                         <rect key="frame" x="12" y="124" width="359" height="288"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
-                                        <connections>
-                                            <segue destination="uGP-80-tFt" kind="push" id="GVK-Gn-cQs"/>
-                                        </connections>
                                     </button>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Daily View" id="KOI-Hs-kOX">
                                         <rect key="frame" x="0.0" y="-31" width="375" height="1033"/>
@@ -392,30 +397,72 @@
             </objects>
             <point key="canvasLocation" x="1854.5" y="-845.5"/>
         </scene>
-        <!--Recipe View-->
+        <!--Recipe-->
         <scene sceneID="Yda-x9-dkf">
             <objects>
-                <viewController extendedLayoutIncludesOpaqueBars="YES" id="uGP-80-tFt" customClass="IndividualMealViewController" customModule="MealPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IndividualRecipeViewController" extendedLayoutIncludesOpaqueBars="YES" id="uGP-80-tFt" customClass="IndividualRecipeViewController" customModule="MealPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EFK-TD-1wq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Individual Meals" id="VQb-7i-eCu">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="670"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="ioU-jZ-drX">
+                                <rect key="frame" x="0.0" y="66" width="375" height="596"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="auY-Fd-7A1">
+                                        <rect key="frame" x="7" y="47" width="360" height="240"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0Yd-hm-FH0">
+                                        <rect key="frame" x="7" y="8" width="360" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="07Q-cV-5a0">
+                                        <rect key="frame" x="321" y="295" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <state key="normal" title="Assign"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="02I-WG-U6s" userLabel="Ingredients Title">
+                                        <rect key="frame" x="8" y="303" width="86" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List of Ingredients" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cu3-uI-1GG" userLabel="Ingredients Label">
+                                        <rect key="frame" x="7" y="332" width="360" height="256"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <animations/>
-                            </imageView>
+                            </scrollView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
-                    <navigationItem key="navigationItem" title="Recipe View" id="WpU-c2-l9k"/>
+                    <navigationItem key="navigationItem" title="Recipe" id="WpU-c2-l9k"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="ingredientlistLabel" destination="Cu3-uI-1GG" id="3EM-iM-m82"/>
+                        <outlet property="recipeImageView" destination="auY-Fd-7A1" id="86r-EZ-UV0"/>
+                        <outlet property="recipenameLabel" destination="0Yd-hm-FH0" id="cUw-9R-EmX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WsB-8W-i8z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1868.5" y="598.5"/>
+            <point key="canvasLocation" x="1806.5" y="598.5"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="pWe-ZR-J3p">
@@ -554,6 +601,20 @@
             </objects>
             <point key="canvasLocation" x="43.5" y="3067.5"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="vu2-3S-qGU">
+            <objects>
+                <viewController id="eJl-yn-3SJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pzn-ha-MDB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ui0-rR-dum" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
     <resources>
         <image name="Add Icon" width="133" height="133"/>
@@ -563,7 +624,6 @@
         <image name="Daily View" width="375" height="1033"/>
         <image name="Getting Started 1" width="375" height="670"/>
         <image name="Getting Started 2" width="375" height="670"/>
-        <image name="Individual Meals" width="375" height="670"/>
         <image name="Line" width="295" height="1"/>
         <image name="List" width="30" height="21"/>
         <image name="Plan" width="50" height="42"/>
