@@ -19,12 +19,13 @@ class IndividualRecipeViewController: UIViewController {
     
     @IBOutlet weak var ingredientlistLabel: UILabel!
     
+    var recipe: [NSDictionary]!
     var recipeID = String.self
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = NSURL(string: "http://food2fork.com/api/search?key=7e1cd92e04fda52d2520cfc3046b9f4b&rId\(escapedSearchString!)")!
+        let url = NSURL(string: "http://food2fork.com/api/search?key=7e1cd92e04fda52d2520cfc3046b9f4b&rId\(recipeID)")!
         
         let request = NSURLRequest(URL: url)
         
@@ -34,11 +35,9 @@ class IndividualRecipeViewController: UIViewController {
                 let json = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments) as! NSDictionary
                 
                 print(json)
-                
-                self.recipe = json["recipe"] as! [NSDictionary]
-                self.browseTableView.reloadData()
+         self.recipe = json["recipe"] as! [NSDictionary]
 
-        
+//        recipenameLabel = recipe["title"] as! String
         
         }
     }
