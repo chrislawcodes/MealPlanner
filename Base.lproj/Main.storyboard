@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="gjD-Gq-y2Z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="LWI-Mf-Re9">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -236,11 +236,11 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResultCell" rowHeight="337" id="Kiq-K3-m8t" userLabel="ResultCell" customClass="ResultCell" customModule="MealPlanner" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ResultCell" rowHeight="337" id="Kiq-K3-m8t" userLabel="ResultCell" customClass="ResultCell" customModule="MealPlanner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="337"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kiq-K3-m8t" id="idx-Jp-mlC">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="336.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="336.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Back Arrow" id="Lew-21-Voa">
@@ -269,6 +269,7 @@
                                         <connections>
                                             <outlet property="recipeImageView" destination="55i-ni-crE" id="h70-d6-KwZ"/>
                                             <outlet property="recipenameLabel" destination="9XP-G5-u6z" id="JJX-48-I5B"/>
+                                            <segue destination="uGP-80-tFt" kind="push" identifier="getRecipeSegue" id="IGq-te-M1m"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -284,7 +285,6 @@
                     <connections>
                         <outlet property="browseTableView" destination="Rkw-kA-P0Q" id="uFd-NW-PcF"/>
                         <outlet property="searchTextField" destination="nLw-N9-sxk" id="rTN-jC-NqW"/>
-                        <segue destination="uGP-80-tFt" kind="push" identifier="getRecipeSegue" id="6QC-sW-djp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h73-11-ntk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -399,22 +399,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="ioU-jZ-drX">
-                                <rect key="frame" x="0.0" y="66" width="375" height="596"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="auY-Fd-7A1">
                                         <rect key="frame" x="7" y="47" width="360" height="240"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0Yd-hm-FH0">
-                                        <rect key="frame" x="7" y="8" width="360" height="42"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="07Q-cV-5a0">
                                         <rect key="frame" x="321" y="295" width="46" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -429,8 +421,40 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List of Ingredients" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cu3-uI-1GG" userLabel="Ingredients Label">
-                                        <rect key="frame" x="7" y="332" width="360" height="256"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="RR7-Cf-Xnq">
+                                        <rect key="frame" x="0.0" y="332" width="375" height="335"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="IngredientCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="IngredientCell" id="EDc-t1-wLx" userLabel="IngredientCell" customClass="IngredientCell" customModule="MealPlanner" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EDc-t1-wLx" id="byv-JM-lrm">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List of Ingredients" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cu3-uI-1GG" userLabel="Ingredient Label">
+                                                            <rect key="frame" x="7" y="-11" width="360" height="54.5"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <animations/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <animations/>
+                                                </tableViewCellContentView>
+                                                <animations/>
+                                                <accessibility key="accessibilityConfiguration" identifier="IngredientCell"/>
+                                                <connections>
+                                                    <outlet property="ingredientLabel" destination="Cu3-uI-1GG" id="sdd-kj-JgR"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0Yd-hm-FH0">
+                                        <rect key="frame" x="7" y="8" width="360" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -448,7 +472,7 @@
                     <navigationItem key="navigationItem" title="Recipe" id="WpU-c2-l9k"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="ingredientlistLabel" destination="Cu3-uI-1GG" id="3EM-iM-m82"/>
+                        <outlet property="ingredientTableView" destination="RR7-Cf-Xnq" id="COO-Te-4tn"/>
                         <outlet property="recipeImageView" destination="auY-Fd-7A1" id="86r-EZ-UV0"/>
                         <outlet property="recipenameLabel" destination="0Yd-hm-FH0" id="cUw-9R-EmX"/>
                     </connections>
